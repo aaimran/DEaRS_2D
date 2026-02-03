@@ -1,0 +1,63 @@
+# 2D Elastic Wave Equation - Low Resolution Configuration
+# Faster simulation with lower resolution (from elasticwave2D_new.ipynb)
+
+# ========================================
+# Domain parameters
+# ========================================
+Lx = 10.0           # Length of domain in x-direction [km]
+Ly = 20.0           # Width of domain in y-direction [km]
+
+# ========================================
+# Grid resolution
+# ========================================
+nx = 26             # Number of grid points in x (low resolution)
+ny = 51             # Number of grid points in y (low resolution)
+
+# ========================================
+# Time parameters
+# ========================================
+tend = 10.0         # End time [s]
+CFL = 0.5           # CFL number for stability
+isnap = 5           # Snapshot frequency for printing
+
+# ========================================
+# Material properties
+# ========================================
+cs = 3.464          # Shear wave speed [km/s]
+cp = 6.0            # Compressional wave speed [km/s]
+rho = 2.6702        # Density [g/cm^3]
+
+# ========================================
+# Source parameters
+# ========================================
+x0 = -15.0          # Source x-location [km]
+y0 = 7.5            # Source y-location [km]
+t0 = 0.0            # Source time [s]
+T = 0.1             # Source duration [s]
+M0 = 0.0            # Source moment [MPa]
+source_type = Gaussian  # Source type: Gaussian or Brune
+
+# ========================================
+# Numerical method
+# ========================================
+order = 4           # Spatial order of accuracy (lower for speed)
+
+# ========================================
+# Friction law
+# ========================================
+fric_law = RS       # Friction law: RS (rate-and-state) or SW (slip-weakening)
+
+# ========================================
+# Fracture mode
+# ========================================
+mode = II           # Fracture mode: II (in-plane shear) or III (out-of-plane shear)
+
+# ========================================
+# Model type
+# ========================================
+model_type = homogeneous  # Model type: homogeneous or random
+
+# ========================================
+# Friction nucleation
+# ========================================
+Y0 = 10.0           # Nucleation patch center [km]
